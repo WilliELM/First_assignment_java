@@ -2,7 +2,7 @@ import java.util.Objects;
 
 public class Anagram {
         public static boolean Anagram(String wordToCheck) {
-            // .sort kan give alfabetisk rækkefølge
+           
             String[] convertedWord = wordToCheck.split("");
             for (int i = 1; i < convertedWord.length ; i++) {
                 String currentChar = convertedWord[i];
