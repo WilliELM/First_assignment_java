@@ -1,8 +1,9 @@
-import org.w3c.dom.ls.LSOutput;
-
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
+
+
     public static <Char> void main(String[] args) {
 
         // A person is elligible to vote if his/her age is greater than or equal to 18.
@@ -56,17 +57,42 @@ public class Main {
         System.out.println("Your abbreviation would be: " + firstName+ ". " + middleName +". " + lastName);
 
 
+        //There is a car, which has attributes model and price, and the car has functionalities start, stop and move.
+        // Also, there is a driver, having attributes name and age, and the behaviour drive.
+        //Create the classes Car and Driver. The functionality of the methods does not matter. Just print something to the console
+
+        Car peugeot = new Car("Peugeot", 2000.99, true, true, false);
+        System.out.println(peugeot);
+        Driver Jannik = new Driver("Jannik", 29, "Peugeot",11);
+        System.out.println(Jannik);
+
+        //Create a class called Employee that includes three pieces of information as instance variables
+        //A first name
+        //A last name
+        //A monthly salary
+        //Your class should have a constructor that initializes the three instance variables.
+        //If the monthly salary is not positive, set it to 0.0.
+        //Create two Employee objects and display each object’s yearly salary.
+        //Then give each Employee a 10% raise and display each Employee’s yearly salary again.
 
 
+        Employee Poul = new Employee("Poul","Larsen",5000.99);
+        Employee Erik = new Employee("Erik","Kjeldsen",8900.11);
+        System.out.println("This is " +Erik.firstName + "'s salary: " + Erik.monthlySalary);
+        System.out.println("This is " +Poul.firstName + "'s salary: " + Poul.monthlySalary);
+        Poul.monthlySalary = Poul.monthlySalary*1.1;
+        Erik.monthlySalary = Erik.monthlySalary*1.1;
+        System.out.println(Erik.monthlySalary);
+        System.out.println(Poul.monthlySalary);
 
+        //Write a program that will return true if a word somewhere has letters that comes after each other in the alphabet.
+        //Fx the word Abracadabra should return true because the two characters A and b comes after each other in the alphabet and comes after each other in the word.
+        //Hello should return false because there are no characters that comes after each other in the alphabeat
+        //Nope should return true because o comes after n in the alphabet
+
+        System.out.println(Anagram.Anagram("abe"));
 
     }
-
-
-
-
-
-
 
 }
 
